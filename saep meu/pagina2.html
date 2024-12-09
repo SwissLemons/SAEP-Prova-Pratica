@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos</title>
+    <link rel="stylesheet" href="./stylePagina2.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="techman (1).png" alt="Logo do Projeto">
+        </div>
+        <div class="buttons">
+            <button onclick="openModal()">Cadastrar Equipamento</button>
+            <button onclick="sair()">Sair</button>
+        </div>
+    </header>
+    <div class="container" id="container">
+        
+    </div>
+
+    <!-- Modal para cadastro de equipamento -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Cadastro de Equipamento</h2>
+            <input type="text" id="itemName" placeholder="Nome">
+            <input type="text" id="itemImage" placeholder="Endereço de imagem">
+            <textarea id="itemDescription" placeholder="Descrição"></textarea>
+            <label>
+                <input type="checkbox" id="itemActive"> Ativo
+            </label>
+            <button onclick="addNewItem()">Cadastrar</button>
+        </div>
+    </div>
+
+   <!-- Modal para exclusão de equipamento -->
+    <div class="modal" id="modalExcluir">
+        <div class="modal-content">
+            <span class="close" onclick="closeModalExcluir()">&times;</span>
+            <h2>Exclusão de Equipamento</h2>
+            <h3>Atenção, essa ação não pode ser desfeita.</h3>
+            <button onclick="confirmarExclusao()">Excluir</button>
+        </div>
+    </div>
+    
+    <!-- Modal para deixar um comentario -->
+    <divc class="modal" id="modalComentar">
+        <div class="modal-content">
+            <span class="close" onclick="closeModalExcluir()">&times;</span>
+            <h2>Cadastro de Comentario</h2>
+            <textarea id="itemDescription" placeholder="Descrição"></textarea>
+            <button onclick="addComentario()">Cadastrar</button>
+        </div>
+    </div>
+
+    <script src="jsPagina2.js"></script>
+</body>
+</html>
